@@ -11,6 +11,25 @@ import { contactLimiter, apiLimiter } from '../server/middleware/rateLimiter.js'
 import { notFound, errorHandler } from '../server/middleware/errorHandler.js';
 
 const app = express();
+let dbPromise = null;
+
+async function connectDB() {
+  if (!process.env.MONGO_URI) return;
+  if (mongoose.connection.readyState >= 1) return;
+  if (!dbPromise) {
+    dbPromise = mongoose.connect(process.env.MONGO_URI, { dbName: 'ankit_portfolio' });
+  }
+  await dbPromise;
+}
+
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    next(err);
+  }
+});
 
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 app.use(cors({ origin: process.env.CLIENT_ORIGIN || '*', methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'], allowedHeaders: ['Content-Type', 'Authorization'], credentials: true }));

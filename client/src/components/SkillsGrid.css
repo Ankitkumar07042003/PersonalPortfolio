@@ -1,0 +1,58 @@
+/* src/components/SkillsGrid.css */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+.skill-group {
+  padding: 1.5rem;
+}
+.skill-group__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+.skill-group__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.skill-group__title {
+  font-family: var(--ff-head);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.skill-group__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.skill-bar-wrap {}
+.skill-bar-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.skill-bar-pct {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+.skill-bar-track {
+  height: 4px;
+  background: rgba(124, 170, 220, 0.1);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  will-change: width;
+}

@@ -1,0 +1,219 @@
+/* ============================================
+   components.css — Reusable UI Components
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--ff-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--grad-cta);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-orange);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-sky);
+  border: 1.5px solid rgba(124, 170, 220, 0.4);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-sky);
+  background: rgba(124, 170, 220, 0.1);
+  box-shadow: var(--shadow-glow-sky);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--glass-border);
+}
+
+.btn-ghost:hover {
+  background: var(--surface-1);
+  color: var(--text-primary);
+  border-color: var(--glass-border-hover);
+}
+
+.glass-card {
+  background: var(--surface-1);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color var(--transition-base), background var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.glass-card:hover {
+  border-color: var(--glass-border-hover);
+  background: var(--surface-2);
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.32rem 0.85rem;
+  background: rgba(44, 61, 115, 0.6);
+  border: 1px solid rgba(124, 170, 220, 0.18);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-sm);
+  color: var(--color-sky);
+  font-weight: 500;
+  transition: all var(--transition-base);
+}
+
+.skill-tag:hover {
+  background: rgba(124, 170, 220, 0.15);
+  border-color: rgba(124, 170, 220, 0.45);
+  transform: translateY(-1px);
+}
+
+.proj-tag {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  background: rgba(124, 170, 220, 0.1);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-xs);
+  color: var(--color-sky);
+  font-weight: 500;
+}
+
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--grad-cta);
+  border-radius: var(--radius-pill);
+  margin: var(--space-md) 0 var(--space-xl);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  background: rgba(26, 37, 71, 0.7);
+  border: 1px solid rgba(124, 170, 220, 0.2);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  font-family: var(--ff-body);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  resize: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--navy-500);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: rgba(124, 170, 220, 0.55);
+  box-shadow: 0 0 0 3px rgba(124, 170, 220, 0.08);
+}
+
+.form-input.error,
+.form-textarea.error {
+  border-color: rgba(241, 91, 66, 0.5);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.badge-orange {
+  background: rgba(241, 91, 66, 0.15);
+  color: var(--color-orange);
+  border: 1px solid rgba(241, 91, 66, 0.3);
+}
+
+.badge-sky {
+  background: rgba(124, 170, 220, 0.12);
+  color: var(--color-sky);
+  border: 1px solid rgba(124, 170, 220, 0.25);
+}
+
+.badge-gold {
+  background: rgba(255, 211, 114, 0.12);
+  color: var(--color-gold);
+  border: 1px solid rgba(255, 211, 114, 0.25);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.alert-success {
+  background: rgba(29, 158, 117, 0.14);
+  border: 1px solid rgba(29, 158, 117, 0.3);
+  color: #5DCAA5;
+}
+
+.alert-error {
+  background: rgba(226, 75, 74, 0.12);
+  border: 1px solid rgba(226, 75, 74, 0.28);
+  color: #F09595;
+}
+
+@media (max-width: 640px) {
+  .btn {
+    white-space: normal;
+    width: 100%;
+  }
+}

@@ -1,0 +1,93 @@
+/* ============================================
+   variables.css — Design Tokens
+   Ankit Kumar Portfolio 2026
+   ============================================ */
+
+:root {
+  /* ─── Brand Palette ─── */
+  --color-gold:        #FFD372;
+  --color-orange:      #F15B42;
+  --color-pink:        #F49CC4;
+  --color-navy:        #2C3D73;
+  --color-sky:         #7CAADC;
+
+  /* ─── Extended Navy Scale ─── */
+  --navy-900:  #0e1629;
+  --navy-800:  #1a2547;
+  --navy-700:  #1f2e58;
+  --navy-600:  #2C3D73;
+  --navy-500:  #3d5499;
+  --navy-400:  #4d6ab8;
+  --navy-300:  #6b85c8;
+  --navy-200:  #8ba3d8;
+
+  /* ─── Text Scale ─── */
+  --text-primary:   #e8edf8;
+  --text-secondary: #a0b4d4;
+  --text-muted:     #6a85a8;
+  --text-faint:     #3d5499;
+
+  /* ─── Gradients ─── */
+  --grad-hero:    linear-gradient(135deg, var(--color-gold) 0%, var(--color-orange) 40%, var(--color-pink) 80%);
+  --grad-cta:     linear-gradient(135deg, var(--color-orange), var(--color-pink));
+  --grad-accent:  linear-gradient(135deg, var(--color-sky), var(--color-navy));
+  --grad-gold:    linear-gradient(90deg, var(--color-gold), var(--color-orange));
+  --grad-timeline:linear-gradient(to bottom, var(--color-gold), var(--color-orange), var(--color-pink), transparent);
+
+  /* ─── Surface / Glass ─── */
+  --surface-1:   rgba(44, 61, 115, 0.20);
+  --surface-2:   rgba(44, 61, 115, 0.35);
+  --surface-3:   rgba(44, 61, 115, 0.55);
+  --glass-border:rgba(124, 170, 220, 0.12);
+  --glass-border-hover: rgba(124, 170, 220, 0.30);
+
+  /* ─── Shadows ─── */
+  --shadow-sm:  0 4px 16px rgba(26, 37, 71, 0.4);
+  --shadow-md:  0 8px 32px rgba(26, 37, 71, 0.5);
+  --shadow-lg:  0 16px 56px rgba(26, 37, 71, 0.6);
+  --shadow-glow-orange: 0 12px 32px rgba(241, 91, 66, 0.35);
+  --shadow-glow-sky:    0 8px 24px rgba(124, 170, 220, 0.25);
+
+  /* ─── Border Radius ─── */
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --radius-pill:100px;
+
+  /* ─── Spacing ─── */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 5rem;
+
+  /* ─── Typography ─── */
+  --ff-head: 'Syne', sans-serif;
+  --ff-body: 'DM Sans', sans-serif;
+
+  --fs-xs:   0.72rem;
+  --fs-sm:   0.8rem;
+  --fs-base: 1rem;
+  --fs-lg:   1.125rem;
+  --fs-xl:   1.5rem;
+  --fs-2xl:  2rem;
+  --fs-3xl:  clamp(2rem, 5vw, 3.5rem);
+  --fs-hero: clamp(3rem, 8vw, 6rem);
+
+  /* ─── Transitions ─── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.15s var(--ease-in-out);
+  --transition-base: 0.25s var(--ease-in-out);
+  --transition-slow: 0.5s var(--ease-out);
+
+  /* ─── Z-index Stack ─── */
+  --z-base:    0;
+  --z-canvas: -1;
+  --z-content: 1;
+  --z-nav:     100;
+  --z-modal:   200;
+}
